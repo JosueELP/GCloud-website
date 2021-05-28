@@ -1,0 +1,10 @@
+runtime: nodejs14 # or another supported version
+
+handlers: # for static files
+- url: /public
+  static_dir: public
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
